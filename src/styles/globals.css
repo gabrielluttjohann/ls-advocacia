@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .responsive-container {
+    @apply container mx-auto px-4 md:px-6 lg:px-8;
+  }
+
+  .responsive-container-l {
+    @apply container ml-auto px-4 md:px-6 lg:px-8;
+  }
+
+  .responsive-container-r {
+    @apply container mr-auto pr-4 md:pr-6 lg:pr-8;
+  }
+
+  .spacing-x {
+    @apply px-4 md:px-6 lg:px-24;
+  }
+}
+
+.text-bordered {
+  -webkit-text-stroke: 1px black; /* Borda branca ao redor do texto */
+  color: white; /* Cor do texto transparente para ver apenas a borda */
+}
+
+body {
+  scroll-behavior: smooth;
+}
