@@ -1,10 +1,13 @@
+
 "use client";
+import img1 from "/icons/geile.jpg";
+import img2 from "/icons/adriana.jpg";
 
 const teamMembers = [
   {
     name: "Geile Luttjohann",
     role: "OAB/RS 102.625",
-    image: "icons/geile.jpg",
+    image: img1.src,
     title: "Pós-Graduada em Direito Bancário",
     description:
       "Com 15 anos de experiência dentro do setor bancário, Geile Luttjohann conhece por dentro e por fora o funcionamento das instituições financeiras. Como executiva de crédito, trabalhou diretamente na concessão, renegociação e cobrança de dívidas, compreendendo exatamente quais estratégias os bancos utilizam e como revertê-las em favor do cliente, possui certificações em Crédito em Risco (FGV), Gestão Financeira e Desempenho Empresarial (Insper), Contabilidade Financeira (FGV) e Falência e Recuperação de Empresas (FGV).",
@@ -12,7 +15,7 @@ const teamMembers = [
   {
     name: "Adriana Soares Schaumloeffel ",
     role: "OAB/RS 136.447",
-    image: "icons/adriana.png", // Replace with the actual image URL
+    image: img2.src, // Replace with the actual image URL
     title: "Especialista em Negociação de Dívidas",
     description:
       "Com uma trajetória consolidada na negociação de dívidas a Dra. Adriana Soares Schaumloeffel é reconhecida por sua habilidade em intermediação de acordos, proporcionando aos clientes condições vantajosas para recuperação financeira. Seja na renegociação de contratos complexos, redução de juros abusivos ou defesa contra cobranças agressivas, a Dra. Adriana utiliza sua vasta experiência para buscar as melhores soluções, evitando a judicialização desnecessária e garantindo economia real para seus clientes.",

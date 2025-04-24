@@ -1,3 +1,4 @@
+import logo from "/icons/logo-2.png";
 "use client";
 
 import { useState } from "react";
@@ -73,7 +74,7 @@ const Navbar = () => {
               onClick={closeAll}
             >
               <img
-                src="/icons/logo-2.png"
+                src={logo.src}
                 alt="Logo"
                 className="w-64 h-24 "
               />

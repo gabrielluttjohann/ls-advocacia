@@ -1,5 +1,5 @@
 "use client";
-
+import heroImg from "/icons/hero.png";
 import Link from "next/link";
 import CustomButton from "../ui/CustomButton";
 
@@ -21,8 +21,7 @@ interface HeroProps {
   };
   formTitle?: string;
   ctaText?: string;
-  heroImage?: string;
-}
+  }
 
 const Hero = ({
   whatsappNumber = "5551989560443",
@@ -39,7 +38,7 @@ const Hero = ({
   },
   formTitle = "Iniciar Atendimento",
   ctaText = "Iniciar Atendimento",
-  heroImage = "icons/hero.png"
+  
 }: HeroProps) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -58,7 +57,7 @@ const Hero = ({
   return (
     <section className="relative">
       <img
-        src={heroImage}
+        src={heroImg.src}
         className="absolute inset-0 h-full w-full object-cover"
         alt="Imagem principal"
       />
