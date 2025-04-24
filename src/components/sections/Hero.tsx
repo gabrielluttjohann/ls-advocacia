@@ -1,5 +1,5 @@
 "use client";
-import heroImg from "/icons/hero.png";
+import heroImg from "../../../public/icons/hero.png";
 import Link from "next/link";
 import CustomButton from "../ui/CustomButton";
 

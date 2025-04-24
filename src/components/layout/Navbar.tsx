@@ -1,6 +1,6 @@
 "use client";
 
-import logo from "/icons/logo-2.png";
+import logo from "../../../public/icons/logo-2.png";
 import { useState } from "react";
 import Link from "next/link";
 import { Menu } from "lucide-react";

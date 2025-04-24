@@ -2,7 +2,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
 import { navbarItems } from "@/data/data";
 import { contactInfo } from "@/data/data";
-import logo from "/icons/logo-2.png";
+import logo from "../../../public/icons/logo-2.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

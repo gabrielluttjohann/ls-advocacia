@@ -164,7 +164,6 @@ const UnseizableDebts = () => {
         whatsappNumber={contactInfo.phone.secondary}
         title="Pedido de Desbloqueio de Valores e Defesa da Impenhorabilidade de Bens"
         description="Atuação rápida e eficaz para proteger seu patrimônio, com a confiança de um escritório que atua exclusivamente em Direito Bancário e é composto por profissionais com mais de 15 anos de experiência, incluindo vivência direta no interior de instituições financeiras. Conhecimento estratégico adquirido dentro dos bancos, aplicado com excelência na defesa de nossos clientes."
-        heroImage="/icons/hero.png"
         links={[]}
         formLabels={{
           name: "Nome Completo",

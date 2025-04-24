@@ -1,7 +1,6 @@
-
 "use client";
-import img1 from "/icons/geile.jpg";
-import img2 from "/icons/adriana.jpg";
+import img1 from "../../../public/icons/geile.jpg";
+import img2 from "../../../public/icons/adriana.png";
 
 const teamMembers = [
   {
@@ -33,7 +32,7 @@ export default function Team() {
           Quem Somos
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-cyan-600 rounded-full"></span>
         </h2>
- 
+
         <div className="mt-10 flex flex-col  md:flex-row gap-10 items-center justify-between">
           {teamMembers.map((member, index) => (
             <div
