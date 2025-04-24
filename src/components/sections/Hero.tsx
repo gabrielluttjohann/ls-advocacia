@@ -39,7 +39,7 @@ const Hero = ({
   },
   formTitle = "Iniciar Atendimento",
   ctaText = "Iniciar Atendimento",
-  heroImage = "/icons/hero.png"
+  heroImage = "icons/hero.png"
 }: HeroProps) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

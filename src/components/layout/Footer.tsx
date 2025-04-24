@@ -46,7 +46,7 @@ export default function Footer() {
           <div className="flex justify-center mb-12">
             <Link href="/">
               <img
-                src="/icons/logo-2.png"
+                src="icons/logo-2.png"
                 alt="Logo"
                 className="w-64 h-32 hover:scale-125 transition-all duration-500"
               />
