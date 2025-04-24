@@ -2,6 +2,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
 import { navbarItems } from "@/data/data";
 import { contactInfo } from "@/data/data";
+import logo from "/icons/logo-2.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -46,7 +47,7 @@ export default function Footer() {
           <div className="flex justify-center mb-12">
             <Link href="/">
               <img
-                src="icons/logo-2.png"
+                src={logo.src}
                 alt="Logo"
                 className="w-64 h-32 hover:scale-125 transition-all duration-500"
               />
