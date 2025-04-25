@@ -75,7 +75,7 @@ const Home = () => {
     <>
       <Hero
         whatsappNumber={contactInfo.phone.main}
-        title="Especialistas em Direito Bancário com Mais de 15 Anos de Experiência no Setor Financeiro"
+        title="Escritório de Advocacia Especialista em Direito Bancário com Mais de 15 Anos de Experiência no Setor Financeiro"
         description="Na Luttjohann & Soares Advocacia, trazemos para você a experiência de mais de 15 anos atuando diretamente no setor bancário. Nossas sócias já estiveram à frente de operações de crédito, renegociação e cobrança em grandes instituições financeiras, o que nos permite entender com detalhes todas as modalidades de crédito e fornecer soluções jurídicas adequadas para cada situação."
         links={[
           { text: "Serviços", href: "#servicos", color: "text-blue" },
@@ -96,7 +96,6 @@ const Home = () => {
         description=""
         items={listItems}
       />
-      <Team />
 
       <Cta
         className="bg-cyan-600 text-white"
@@ -115,6 +114,7 @@ const Home = () => {
         />
       </Cta>
 
+      <Team />
       <Differentials buttonHref={contactInfo.whatsapp.main} />
     </>
   );

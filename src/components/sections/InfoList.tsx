@@ -35,38 +35,27 @@ const InfoListSection = ({ id, title, description, items }: SectionProps) => {
             {items.map((item, index) => (
               <li
                 key={index}
-                className={`hover:bg-[#00B8DB] text-black hover:text-white px-2 py-4 flex items-center space-x-4 ${
+                className={`group hover:bg-[#00B8DB] text-black hover:text-white px-2 py-4 flex items-center space-x-4 ${
                   item.href ? "cursor-pointer" : ""
                 }`}
               >
-                {item.href ? (
-                  <Link
-                    href={item.href}
-                    className="flex items-center space-x-4 w-full"
-                  >
-                    <div className="p-2 bg-cyan-100 rounded-md">{item.icon}</div>
-                    <div>
-                      <h4 className="text-lg font-semibold">{item.title}</h4>
-                      {item.description && (
-                        <p className="text-sm text-gray-700 group-hover:text-white">
-                          {item.description}
-                        </p>
-                      )}
-                    </div>
-                  </Link>
-                ) : (
-                  <>
-                    <div className="p-2 bg-cyan-100 rounded-md">{item.icon}</div>
-                    <div>
-                      <h4 className="text-lg font-semibold">{item.title}</h4>
-                      {item.description && (
-                        <p className="text-sm text-gray-700 group-hover:text-white">
-                          {item.description}
-                        </p>
-                      )}
-                    </div>
-                  </>
-                )}
+                <div className="p-2 bg-cyan-100 rounded-md">{item.icon}</div>
+                <div>
+                  <h4 className="text-lg font-semibold">{item.title}</h4>
+                  {item.description && (
+                    <p className="text-sm text-gray-700 group-hover:text-white">
+                      {item.description}
+                    </p>
+                  )}
+                  {item.href && (
+                    <Link
+                      href={item.href}
+                      className="group-hover:text-white text-sm text-cyan-600 hover:underline"
+                    >
+                      Saiba Mais
+                    </Link>
+                  )}
+                </div>
               </li>
             ))}
           </ul>

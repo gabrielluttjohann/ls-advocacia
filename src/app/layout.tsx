@@ -12,7 +12,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Luttjohann & Soares Advocacia | Especialista em Direito Bancário",
+  title: "Luttjohann & Soares Advocacia | Especialistas em Direito Bancário",
   description:
     "O Luttjohann & Soares Advocacia Bancária, conta com Advogados Especialistas em Direito Bancário, com mais de 15 anos de experiência prática no setor financeiro. Nosso escritório atua na defesa de pessoas físicas e jurídicas em questões como renegociação de dívidas, revisão de contratos, defesa contra cobranças abusivas e defesa em ações de cobrança e execução de dívidas bancárias.",
 };

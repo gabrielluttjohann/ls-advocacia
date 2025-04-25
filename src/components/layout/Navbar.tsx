@@ -18,7 +18,7 @@ const Navbar = () => {
         { href: "/servicos/negociacao-de-dividas", label: "Negociação de Dívidas" },
         { href: "/servicos/superendividamento", label: "Superendividamento" },
         { href: "/servicos/revisao-de-taxas-de-juros", label: "Revisão de Juros" },
-        { href: "/servicos/consignado-ilegal", label: "Consignado Ilegal" },
+        { href: "/servicos/consignado-ilegal", label: "Ilegalidade em Consignados" },
         { href: "/servicos/defesa-em-cobrancas", label: "Defesa em Cobranças" },
         { href: "/servicos/bens-impenhoraveis", label: "Conta Bloqueada" },
         { href: "/servicos/bens-impenhoraveis", label: "Bens Impenhoráveis" },

@@ -2,7 +2,7 @@ export const contactInfo = {
   email: "contato@luttjohannsoares.com.br",
   phone: {
     main: "(51) 98956-0443",
-    secondary: "(51) 99899-05849",
+    secondary: "(51) 98990-5849",
   },
   address: "Rua Tamandaré, 140, sala 901 - Novo Hamburgo, RS",
 

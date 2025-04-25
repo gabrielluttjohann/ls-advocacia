@@ -21,35 +21,37 @@ interface HeroProps {
   };
   formTitle?: string;
   ctaText?: string;
-  }
+}
 
 const Hero = ({
-  whatsappNumber = "5551989560443",
+  whatsappNumber,
   title = "Especialistas em Direito Bancário com Mais de 15 Anos de Experiência no Setor Financeiro",
   description = "Na Luttjohann & Soares Advocacia, trazemos para você a experiência de mais de 15 anos atuando diretamente no setor bancário.",
   links = [
     { text: "Quem Somos", href: "#about" },
-    { text: "Nossos Serviços", href: "#services" }
+    { text: "Nossos Serviços", href: "#services" },
   ],
   formLabels = {
     name: "Nome",
     city: "Município",
-    problem: "Como podemos lhe auxiliar?"
+    problem: "Como podemos lhe auxiliar?",
   },
   formTitle = "Iniciar Atendimento",
   ctaText = "Iniciar Atendimento",
-  
 }: HeroProps) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    const cleanPhoneNumber = (number: string) => {
+      return number.replace("(", "").replace(")", "").replace(" ", "").replace("-", "");
+    };
     const form = event.currentTarget;
     const firstName = (form.elements.namedItem("firstName") as HTMLInputElement).value;
     const address = (form.elements.namedItem("address") as HTMLInputElement).value;
     const problem = (form.elements.namedItem("problem") as HTMLInputElement).value;
-
+    const cleanedPhoneNumber = cleanPhoneNumber(whatsappNumber);
     const message = `Olá, meu nome é *${firstName}*.\nSou de *${address}*\n\n${problem}`;
-    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    const whatsappLink = `https://wa.me/55${cleanedPhoneNumber}?text=${encodeURIComponent(message)}`;
 
     window.open(whatsappLink, "_blank");
   };
@@ -79,15 +81,15 @@ const Hero = ({
               <h2 className="mb-6 max-w-xl font-sans text-xl font-bold tracking-tight text-white sm:text-5xl sm:leading-none">
                 {title}
               </h2>
-              <p className="mb-4 max-w-2xl text-base text-gray-200 md:text-lg">
-                {description}
-              </p>
+              <p className="mb-4 max-w-2xl text-base text-gray-200 md:text-lg">{description}</p>
               <div className="flex items-center gap-3">
                 {links.map((link, index) => (
                   <Link
                     key={index}
                     href={link.href}
-                    className={`inline-flex items-center font-semibold tracking-wider ${link.color || 'text-cyan-400'} transition-colors duration-200 hover:text-teal-300`}
+                    className={`inline-flex items-center font-semibold tracking-wider ${
+                      link.color || "text-cyan-400"
+                    } transition-colors duration-200 hover:text-teal-300`}
                   >
                     {link.text}
                     <svg
@@ -115,7 +117,7 @@ const Hero = ({
                       {formLabels.name}
                     </label>
                     <input
-                      placeholder={`Digite seu ${formLabels.name?.toLowerCase() || 'nome'}`}
+                      placeholder={`Digite seu ${formLabels.name?.toLowerCase() || "nome"}`}
                       type="text"
                       className="mb-2 h-12 w-full flex-grow appearance-none rounded border border-gray-300 bg-white px-4 shadow-sm ring-cyan-200 transition duration-200 focus:border-cyan-400 focus:outline-none focus:ring"
                       id="firstName"
@@ -131,7 +133,7 @@ const Hero = ({
                       {formLabels.city}
                     </label>
                     <input
-                      placeholder={`Informe seu ${formLabels.city?.toLowerCase() || 'município'}`}
+                      placeholder={`Informe seu ${formLabels.city?.toLowerCase() || "município"}`}
                       type="text"
                       className="mb-2 h-12 w-full flex-grow appearance-none rounded border border-gray-300 bg-white px-4 shadow-sm ring-cyan-200 transition duration-200 focus:border-cyan-400 focus:outline-none focus:ring"
                       id="address"

@@ -101,7 +101,6 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li className="text-gray-600">CNPJ: {contactInfo.cnpj}</li>
                 <li className="text-gray-600">{contactInfo.officeOAB}</li>
-                <li className="text-gray-600">Sócios Responsáveis</li>
               </ul>
             </div>
 
