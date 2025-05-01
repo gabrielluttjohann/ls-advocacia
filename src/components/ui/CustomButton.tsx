@@ -31,6 +31,8 @@ const CustomButton = ({ className, title, type = "link", prefixIcon, href }: But
         className={`${baseStyles} ${className}`}
         href={href}
         prefetch={false}
+        target="_blank"
+        rel="noopener noreferrer"
       >
         {prefixIcon} {title}
       </Link>

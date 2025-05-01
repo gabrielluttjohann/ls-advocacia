@@ -1,8 +1,11 @@
 import Cta from "@/components/sections/Cta";
 import Differentials from "@/components/sections/Differentials";
+import { ExperienceCounter } from "@/components/sections/ExperienceCounter";
 import Hero from "@/components/sections/Hero";
 import InfoListSection from "@/components/sections/InfoList";
+import Steps from "@/components/sections/Steps";
 import Team from "@/components/sections/Team";
+import WhatsappButton from "@/components/ui/WhatsappButton";
 import { contactInfo } from "@/data/contact";
 import {
   ShieldAlert,
@@ -11,10 +14,10 @@ import {
   Percent,
   FileSearch,
   Gavel,
-  Shield,
   Landmark,
   Wheat,
   Factory,
+  Shield,
 } from "lucide-react";
 
 const Home = () => {
@@ -50,13 +53,13 @@ const Home = () => {
       href: "/servicos/defesa-em-cobrancas",
     },
     {
-      icon: <Shield className="w-6 h-6 text-cyan-600" />,
+      icon: <Landmark className="w-6 h-6 text-cyan-600" />,
       title: "Bloqueio de Valores em Conta",
       href: "/servicos/bens-impenhoraveis",
     },
     {
-      icon: <Landmark className="w-6 h-6 text-cyan-600" />,
-      title: "Pedidos de Impenhorabilidade de Bens",
+      icon: <Shield className="w-6 h-6 text-cyan-600" />,
+      title: "Pedidos de Impenhorabilidade de Bens",
       href: "/servicos/bens-impenhoraveis",
     },
     {
@@ -64,9 +67,10 @@ const Home = () => {
       title: "Defesa Bancária do Produtor Rural",
       href: "/servicos/defesa-de-produtores-rurais",
     },
+
     {
       icon: <Factory className="w-6 h-6 text-cyan-600" />,
-      title: "Defesa Bancária Empresarial",
+      title: "Defesa Bancária Empresarials",
       href: "/servicos/dividas-empresariais",
     },
   ];
@@ -76,7 +80,7 @@ const Home = () => {
       <Hero
         whatsappNumber={contactInfo.phone.main}
         title="Escritório de Advocacia Especialista em Direito Bancário com Mais de 15 Anos de Experiência no Setor Financeiro"
-        description="Na Luttjohann & Soares Advocacia, trazemos para você a experiência de mais de 15 anos atuando diretamente no setor bancário. Nossas sócias já estiveram à frente de operações de crédito, renegociação e cobrança em grandes instituições financeiras, o que nos permite entender com detalhes todas as modalidades de crédito e fornecer soluções jurídicas adequadas para cada situação."
+        description="Durante 15 anos, trabalhamos para os bancos. Hoje, colocamos toda essa experiência a favor dos nossos clientes. Com conhecimento real das estratégias bancárias e expertise em crédito, oferecemos uma defesa estratégica e assertiva, agindo rapidamente para proteger seus direitos e patrimônio e garantir resultados concretos."
         links={[
           { text: "Serviços", href: "#servicos", color: "text-blue" },
           { text: "Diferenciais", href: "#diferenciais", color: "text-cyan-500" },
@@ -86,8 +90,8 @@ const Home = () => {
           city: "Município",
           problem: "Descreva seu caso",
         }}
-        formTitle="Agende uma Consulta"
-        ctaText="Enviar Mensagem"
+        formTitle="Fale Agora com um Advogado"
+        ctaText="Falar com um Advogado Agora"
       />
 
       <InfoListSection
@@ -108,14 +112,16 @@ const Home = () => {
         </Cta.Description>
         <Cta.Button
           className="bg-white text-cyan-600"
-          title="Iniciar Atendimento pelo Whatsapp"
+          title="Falar Agora com um Advogado"
           type="link"
-          href={contactInfo.whatsapp.main}
+          isMainPage
         />
       </Cta>
-
+      <ExperienceCounter />
+      <Steps />
       <Team />
-      <Differentials buttonHref={contactInfo.whatsapp.main} />
+      <Differentials isMainPage />
+      <WhatsappButton isMainPage />
     </>
   );
 };

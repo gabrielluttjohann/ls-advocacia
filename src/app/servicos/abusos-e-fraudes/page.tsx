@@ -4,6 +4,7 @@ import FAQSection from "@/components/sections/FAQ";
 import Hero from "@/components/sections/Hero";
 import InfoListSection from "@/components/sections/InfoList";
 import Team from "@/components/sections/Team";
+import WhatsappButton from "@/components/ui/WhatsappButton";
 import { contactInfo } from "@/data/contact";
 import {
   Receipt,
@@ -21,6 +22,7 @@ import {
   Banknote,
   Lock,
   FileX,
+  Percent,
 } from "lucide-react";
 
 interface FAQItem {
@@ -30,6 +32,10 @@ interface FAQItem {
 
 const BankAbuseAndFraud = () => {
   const listItems = [
+    {
+      icon: <Percent className="w-6 h-6 text-cyan-600" />,
+      title: "Juros Abusivos"
+    },
     {
       icon: <Receipt className="w-6 h-6 text-cyan-600" />,
       title: "Cobrança de tarifas ou pacotes de serviços não contratados",
@@ -147,16 +153,16 @@ const BankAbuseAndFraud = () => {
     <>
       <Hero
         whatsappNumber={contactInfo.phone.secondary}
-        title="Abusos e Fraudes Bancárias"
-        description="Nosso escritório é especializado em Direito Bancário e conta com mais de 15 anos de experiência no mercado financeiro. Com advogados que já atuaram dentro de instituições bancárias, oferecemos uma visão técnica e precisa sobre as práticas ilegais que afetam diariamente aposentados, trabalhadores e empresários."
+        title="Advogados Especialistas em Abusos e Fraudes Bancárias"
+        description="Durante 15 anos, trabalhamos para os bancos. Hoje, colocamos toda essa experiência a favor dos nossos clientes. Com conhecimento real das estratégias bancárias e expertise em crédito, oferecemos uma defesa estratégica e assertiva, agindo rapidamente para proteger seus direitos e patrimônio e garantir resultados concretos."
         links={[]}
         formLabels={{
           name: "Nome Completo",
           city: "Município",
           problem: "Descreva seu caso",
         }}
-        formTitle="Agende uma Consulta"
-        ctaText="Enviar Mensagem"
+        formTitle="Fale Agora com um Advogado"
+        ctaText="Falar com um Advogado Agora"
       />
 
       <InfoListSection
@@ -176,21 +182,21 @@ const BankAbuseAndFraud = () => {
         </Cta.Description>
         <Cta.Button
           className="bg-white text-cyan-600"
-          title="Iniciar Atendimento pelo Whatsapp"
+          title="Falar Agora com um Advogado"
           type="link"
-          href={contactInfo.whatsapp.services.bankAbuseandFraud}
         />
       </Cta>
 
       <FAQSection
         title="Perguntas Frequentes"
         faqs={faqData}
-        contactLink={contactInfo.whatsapp.services.bankAbuseandFraud}
-        contactLabel="Fale agora com um Especialista"
+        contactLink={contactInfo.whatsapp.secondary}
+        contactLabel="Falar Agora com um Advogado"
       />
 
       <Team />
-      <Differentials buttonHref={contactInfo.whatsapp.services.bankAbuseandFraud} />
+      <Differentials />
+      <WhatsappButton />
     </>
   );
 };

@@ -60,7 +60,10 @@ const FAQSection = ({
             </div>
             {expandedQuestion === item.question && (
               <div className="px-6 py-4 border-t border-gray-200 bg-gray-50">
-                <p className="text-gray-700">{item.answer}</p>
+                <p
+                  className="text-gray-700"
+                  dangerouslySetInnerHTML={{ __html: item.answer }}
+                />
               </div>
             )}
           </div>
@@ -73,6 +76,7 @@ const FAQSection = ({
             className="inline-flex mt-8 bg-cyan-500 hover:bg-cyan-600 text-white font-medium shadow-lg hover:shadow-cyan-500/30 transition-all"
             title={contactLabel}
             type="link"
+            href={contactLink}
           />
         </div>
       )}

@@ -49,7 +49,7 @@ export default function Footer() {
               <img
                 src={logo.src}
                 alt="Logo"
-                className="w-64 h-32 hover:scale-125 transition-all duration-500"
+                className="w-64 h-28 md:hover:scale-125 transition-all duration-500"
               />
             </Link>
           </div>

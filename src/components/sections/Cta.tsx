@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import CustomButton from "../ui/CustomButton";
+import { contactInfo } from "@/data/contact";
 
 type CtaLayout = "centered" | "split" | "card" | "minimal" | "withImage";
 
@@ -24,7 +25,7 @@ interface CtaDescriptionProps {
 interface CtaButtonProps {
   title: string;
   type: "link" | "button";
-  href?: string;
+  isMainPage?: boolean;
   className?: string;
   onClick?: () => void;
 }
@@ -82,7 +83,9 @@ const Description = ({ children, className = "" }: CtaDescriptionProps) => {
   return <p className={`text-lg mb-6 ${className}`}>{children}</p>;
 };
 
-const Button = ({ title, type, href, className = "" }: CtaButtonProps) => {
+const Button = ({ title, type, isMainPage, className = "" }: CtaButtonProps) => {
+  
+  const href = isMainPage ? contactInfo.whatsapp.main : contactInfo.whatsapp.secondary;
   return (
     <CustomButton
       className={className}

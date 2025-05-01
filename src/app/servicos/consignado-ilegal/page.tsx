@@ -4,6 +4,7 @@ import FAQSection from "@/components/sections/FAQ";
 import Hero from "@/components/sections/Hero";
 import InfoListSection from "@/components/sections/InfoList";
 import Team from "@/components/sections/Team";
+import WhatsappButton from "@/components/ui/WhatsappButton";
 import { contactInfo } from "@/data/contact";
 
 import {
@@ -16,8 +17,6 @@ import {
   HeartPulse,
   CreditCard,
 } from "lucide-react";
-
-
 
 const IllegalLoans = () => {
   const listItems = [
@@ -82,31 +81,31 @@ const IllegalLoans = () => {
     {
       question: "Vocês atendem clientes de todo o Brasil?",
       answer:
-        "Nosso foco é a Região Sul — Rio Grande do Sul, Santa Catarina e Paraná — mas em alguns casos, conseguimos atender digitalmente outras regiões mediante análise prévia.",
+        "Nosso foco é a Região Sul — Rio Grande do Sul, Santa Catarina e Paraná — pois isso nos permite atuar com maior agilidade e proximidade junto às varas judiciais. Mas, em alguns casos, conseguimos atender digitalmente outras regiões mediante análise prévia.",
     },
     {
       question: "Preciso ir até o escritório para ser atendido?",
       answer:
-        "Não. Todo o atendimento pode ser feito de forma digital, com reuniões por vídeo, assinatura eletrônica e acompanhamento completo online.",
+        "Não. Embora você possa ser atendido presencialmente em nosso escritório físico, todo o atendimento pode ser feito de forma digital, com conforto e segurança. Realizamos reuniões por vídeo, assinatura eletrônica de documentos e acompanhamento completo do processo online.",
     },
     {
       question: "O atendimento é feito apenas por advogados?",
       answer:
-        "Sim. Você fala diretamente com advogados experientes, com atuação exclusiva em Direito Bancário.",
+        "Sim. Aqui você fala diretamente com advogadas e advogados experientes, com profundo conhecimento técnico e atuação exclusiva em Direito Bancário. Nada de robôs ou atendimentos terceirizados.",
     },
     {
       question: "Vocês cobram pela análise inicial do caso?",
       answer:
-        "Não. Fazemos uma análise jurídica gratuita e personalizada antes de qualquer cobrança.",
+        "Não. Fazemos uma análise jurídica gratuita e personalizada, onde avaliamos os documentos, os descontos e os possíveis abusos cometidos pela instituição financeira antes de qualquer cobrança.",
     },
     {
       question: "Em quanto tempo terei uma resposta sobre meu caso?",
-      answer: "Na maioria das vezes, retornamos com a análise imediatamente após o contato.",
+      answer: "Na maioria das vezes, retornamos com a análise imediatamente após o contato. Valorizamos a agilidade e o compromisso com quem nos procura.",
     },
     {
       question: "Quanto custa para entrar com a ação?",
       answer:
-        "Os custos dependem do tipo de caso. Após a análise gratuita, apresentamos uma proposta clara e transparente.",
+        "Os custos dependem do tipo de caso e da complexidade da ação. Após a análise gratuita, apresentamos uma proposta clara, transparente e com condições acessíveis.",
     },
   ];
 
@@ -114,16 +113,16 @@ const IllegalLoans = () => {
     <>
       <Hero
         whatsappNumber={contactInfo.phone.secondary}
-        title="Ilegalidade em Empréstimos Consignados"
-        description="Atuação técnica, ética e eficaz na proteção de aposentados, pensionistas, servidores e trabalhadores celetistas. Nosso escritório é especializado em Direito Bancário, com destaque para a atuação em demandas relacionadas a empréstimos consignados. Contamos com mais de 15 anos de experiência no setor financeiro, o que nos permite identificar rapidamente abusos e irregularidades cometidas por bancos, financeiras e instituições que operam com crédito consignado."
+        title="Advogados Especialistas em Ilegalidades em Empréstimos Consignados"
+        description="Durante 15 anos, trabalhamos para os bancos. Hoje, colocamos toda essa experiência a favor dos nossos clientes. Com conhecimento real das estratégias bancárias e expertise em crédito, oferecemos uma defesa estratégica e assertiva, agindo rapidamente para proteger seus direitos e patrimônio e garantir resultados concretos."
         links={[]}
         formLabels={{
           name: "Nome Completo",
           city: "Município",
           problem: "Descreva seu caso",
         }}
-        formTitle="Agende uma Consulta"
-        ctaText="Enviar Mensagem"
+        formTitle="Fale Agora com um Advogado"
+        ctaText="Falar com um Advogado Agora"
       />
 
       <InfoListSection
@@ -143,21 +142,22 @@ const IllegalLoans = () => {
         </Cta.Description>
         <Cta.Button
           className="bg-white text-cyan-600"
-          title="Iniciar Atendimento pelo Whatsapp"
+          title="Falar agora com um Advogado"
           type="link"
-          href={contactInfo.whatsapp.services.illegalLoans}
         />
       </Cta>
 
       <FAQSection
         title="Perguntas Frequentes"
         faqs={faqData}
-        contactLink={contactInfo.whatsapp.services.illegalLoans}
-        contactLabel="Fale agora com um Especialista"
+        contactLink={contactInfo.whatsapp.secondary}
+        contactLabel="Falar Agora com um Advogado"
       />
 
+
       <Team />
-      <Differentials buttonHref={contactInfo.whatsapp.services.illegalLoans} />
+      <Differentials />
+      <WhatsappButton  />
     </>
   );
 };

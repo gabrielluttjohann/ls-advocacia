@@ -4,6 +4,7 @@ import FAQSection from "@/components/sections/FAQ";
 import Hero from "@/components/sections/Hero";
 import InfoListSection from "@/components/sections/InfoList";
 import Team from "@/components/sections/Team";
+import WhatsappButton from "@/components/ui/WhatsappButton";
 import { contactInfo } from "@/data/contact";
 import { CreditCard, PieChart, AlertTriangle, Shield, Percent, HandCoins } from "lucide-react";
 
@@ -54,11 +55,6 @@ const OverIndebtedness = () => {
     {
       question: "O plano judicial de pagamento pode ter carência?",
       answer:
-        "A lei abrange dívidas decorrentes de relações de consumo, como empréstimos, financiamentos, compras parceladas e uso de cartão de crédito. Estão excluídas dívidas com garantia real (como veículos e imóveis), crédito rural e dívidas originadas por fraude.",
-    },
-    {
-      question: "O plano judicial de pagamento pode ter carência?",
-      answer:
         "Sim. A Lei do Superendividamento permite que o consumidor proponha um prazo de carência no início do plano de pagamento — ou seja, um período em que não é exigido o pagamento imediato das parcelas. Esse prazo é especialmente importante para quem está em situação crítica e precisa reorganizar sua vida financeira antes de iniciar o pagamento das dívidas. A carência deve ser justificada e aprovada pelo juiz, podendo variar conforme a situação concreta e a concordância dos credores.",
     },
     {
@@ -97,7 +93,7 @@ const OverIndebtedness = () => {
     <>
       <Hero
         whatsappNumber={contactInfo.phone.secondary}
-        title="Defesa Jurídica em Casos de Superendividamento"
+        title="Advogados Especialistas em Defesa do Consumidor Superendividado"
         description="Nosso escritório é referência em Direito Bancário e na defesa de consumidores que enfrentam superendividamento — situação em que as dívidas ultrapassam a capacidade de pagamento sem comprometer o mínimo existencial. Com mais de 15 anos de experiência no mercado financeiro e profissionais que já atuaram em bancos, temos o conhecimento necessário para identificar abusos e construir soluções jurídicas eficazes."
         links={[]}
         formLabels={{
@@ -126,21 +122,21 @@ const OverIndebtedness = () => {
         </Cta.Description>
         <Cta.Button
           className="bg-white text-cyan-600"
-          title="Iniciar Atendimento pelo Whatsapp"
+          title="Falar Agora com um Advogado"
           type="link"
-          href={contactInfo.whatsapp.services.overIndebtedness}
         />
       </Cta>
 
       <FAQSection
         title="Perguntas Frequentes"
         faqs={faqData}
-        contactLink={contactInfo.whatsapp.services.overIndebtedness}
-        contactLabel="Fale agora com um Especialista"
+        contactLink={contactInfo.whatsapp.secondary}
+        contactLabel="Falar Agora com um Advogado"
       />
 
       <Team />
-      <Differentials buttonHref={contactInfo.whatsapp.services.overIndebtedness} />
+      <Differentials />
+      <WhatsappButton />
     </>
   );
 };

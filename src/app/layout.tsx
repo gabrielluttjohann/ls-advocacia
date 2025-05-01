@@ -4,7 +4,6 @@ import "./globals.css";
 import { GoogleTagManager, GoogleTagManagerNoScript } from "@/components/layout/GoogleTagManager";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import WhatsappButton from "@/components/ui/WhatsappButton";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -34,10 +33,11 @@ export default function RootLayout({
       </head>
       <body className={`${spaceGrotesk.variable}  antialiased`}>
         <GoogleTagManagerNoScript />
-        <Navbar />
-        {children}
+        <header>
+          <Navbar />
+        </header>
+        <main>{children}</main>
         <Footer />
-        <WhatsappButton />
       </body>
     </html>
   );

@@ -1,7 +1,10 @@
 import { UserCheck, ShieldCheck, Briefcase, Scale, CheckCircle } from "lucide-react";
 import CustomButton from "../ui/CustomButton";
+import { contactInfo } from "@/data/contact";
 
-const Differentials = ({buttonHref}: {buttonHref: string}) => {
+const Differentials = ({isMainPage = false}: {isMainPage?: boolean}) => {
+  const buttonHref = isMainPage ? contactInfo.whatsapp.main : contactInfo.whatsapp.secondary;
+
   const differentials = [
     {
       title: "Atendimento Personalizado",
@@ -82,7 +85,7 @@ const Differentials = ({buttonHref}: {buttonHref: string}) => {
             </p>
             <CustomButton
               className="bg-cyan-500 hover:bg-cyan-600 text-white font-medium shadow-lg hover:shadow-cyan-500/30 transition-all"
-              title="Fale com nossa equipe jurídica"
+              title="Falar Agora com um Advogado"
               type="link"
               href={buttonHref}
             />

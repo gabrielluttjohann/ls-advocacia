@@ -4,6 +4,7 @@ import FAQSection from "@/components/sections/FAQ";
 import Hero from "@/components/sections/Hero";
 import InfoListSection from "@/components/sections/InfoList";
 import Team from "@/components/sections/Team";
+import WhatsappButton from "@/components/ui/WhatsappButton";
 import { contactInfo } from "@/data/contact";
 
 import {
@@ -154,7 +155,14 @@ const UnseizableDebts = () => {
     {
       question: "Em quais estados vocês atuam?",
       answer:
-        "Atuamos exclusivamente na Região Sul do Brasil — nos estados do Rio Grande do Sul, Santa Catarina e Paraná. Nosso foco regional é uma escolha estratégica: muitas vezes, as demandas exigem presença em audiências, análise de documentos físicos ou contato próximo com varas judiciais. Estar na mesma região nos permite oferecer um atendimento mais ágil, técnico e personalizado, com maior segurança para o cliente e efetividade na condução dos processos. Com sede no Rio Grande do Sul e estrutura preparada para atendimento digital, conseguimos unir proximidade geográfica e atuação moderna, sempre com foco na excelência em Direito Bancário.",
+      `
+      Atuamos exclusivamente na Região Sul do Brasil — nos estados do Rio Grande do Sul, Santa Catarina e Paraná.
+      <br /> <br />
+      Nosso foco regional é uma escolha estratégica: muitas vezes, as demandas exigem presença em audiências, análise de documentos físicos ou contato próximo com varas judiciais. Estar na mesma região nos permite oferecer um atendimento mais ágil, técnico e personalizado, com maior segurança para o cliente e efetividade na condução dos processos.
+      <br /> <br />
+      Com sede no Rio Grande do Sul e estrutura preparada para atendimento digital, conseguimos unir proximidade geográfica e atuação moderna, sempre com foco na excelência em Direito Bancário.
+
+      `,
     },
   ];
 
@@ -162,16 +170,16 @@ const UnseizableDebts = () => {
     <>
       <Hero
         whatsappNumber={contactInfo.phone.secondary}
-        title="Pedido de Desbloqueio de Valores e Defesa da Impenhorabilidade de Bens"
-        description="Atuação rápida e eficaz para proteger seu patrimônio, com a confiança de um escritório que atua exclusivamente em Direito Bancário e é composto por profissionais com mais de 15 anos de experiência, incluindo vivência direta no interior de instituições financeiras. Conhecimento estratégico adquirido dentro dos bancos, aplicado com excelência na defesa de nossos clientes."
+        title="Advogados Especialistas em Desbloqueio de Valores e Proteção em Impenhorabilidadess"
+        description="Durante 15 anos, trabalhamos para os bancos. Hoje, colocamos toda essa experiência a favor dos nossos clientes. Com conhecimento real das estratégias bancárias e expertise em crédito, oferecemos uma defesa estratégica e assertiva, agindo rapidamente para proteger seus direitos e patrimônio e garantir resultados concretos."
         links={[]}
         formLabels={{
           name: "Nome Completo",
           city: "Município",
           problem: "Descreva seu caso",
         }}
-        formTitle="Agende uma Consulta"
-        ctaText="Enviar Mensagem"
+        formTitle="Fale Agora com um Advogado"
+        ctaText="Falar com um Advogado Agora"
       />
 
       <InfoListSection
@@ -191,22 +199,21 @@ const UnseizableDebts = () => {
         </Cta.Description>
         <Cta.Button
           className="bg-white text-cyan-600"
-          title="Iniciar Atendimento pelo Whatsapp"
+          title="Falar Agora com um Advogado"
           type="link"
-          href={contactInfo.whatsapp.services.unattachableAssets}
         />
       </Cta>
 
       <FAQSection
         title="Perguntas Frequentes"
-        description="Tire suas dúvidas sobre bloqueios e penhoras."
         faqs={faqData}
-        contactLink={contactInfo.whatsapp.services.unattachableAssets}
-        contactLabel="Fale agora com um Especialista"
+        contactLink={contactInfo.whatsapp.secondary}
+        contactLabel="Falar Agora com um Advogado"
       />
 
       <Team />
-      <Differentials buttonHref={contactInfo.whatsapp.services.unattachableAssets} />
+      <Differentials />
+      <WhatsappButton />
     </>
   );
 };

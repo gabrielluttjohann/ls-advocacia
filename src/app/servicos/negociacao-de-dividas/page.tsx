@@ -4,6 +4,7 @@ import FAQSection from "@/components/sections/FAQ";
 import Hero from "@/components/sections/Hero";
 import InfoListSection from "@/components/sections/InfoList";
 import Team from "@/components/sections/Team";
+import WhatsappButton from "@/components/ui/WhatsappButton";
 import { contactInfo } from "@/data/contact";
 import {
   CalendarClock,
@@ -12,9 +13,8 @@ import {
   PhoneOff,
   FileBadge,
   FileCheck,
-  Handshake
-} from 'lucide-react';
-
+  Handshake,
+} from "lucide-react";
 
 interface FAQItem {
   question: string;
@@ -73,7 +73,7 @@ const NegotiatingDebts = () => {
       question:
         "Vocês contam com profissionais que entendem de cálculos para negociar com os bancos?",
       answer:
-        "Sim. Nosso escritório trabalha com peritos auxiliares especializados em cálculos bancários, o que nos permite apresentar propostas de negociação baseadas em dados precisos e contestar simulações feitas pelos bancos que contenham juros excessivos, encargos indevidos ou amortizações incorretas.",
+        "Sim. Nosso escritório trabalha com peritos auxiliares especializados em cálculos bancários, o que nos permite apresentar propostas de negociação baseadas em dados precisos e contestar simulações feitas pelos bancos que contenham juros excessivos, encargos indevidos ou amortizações incorretas. Essa análise técnica garante que o cliente não aceite acordos injustos ou desequilibrados, aumentando as chances de uma negociação bem-sucedida e segura.",
     },
     {
       question: "O banco se nega a negociar. Posso fazer algo?",
@@ -96,12 +96,6 @@ const NegotiatingDebts = () => {
         "Sim. Em muitos casos, mesmo com ação em andamento, é possível suspender o processo e fazer um acordo extrajudicial. O advogado atua tanto na negociação quanto na formalização da retirada da ação, garantindo segurança jurídica.",
     },
     {
-      question:
-        "Me sinto envergonhado por dever e tenho medo de conversar com o banco. Isso é comum?",
-      answer:
-        "Sim, e você não está sozinho. Muitos clientes se sentem culpados ou constrangidos por estarem endividados, mas a verdade é que muitas vezes o sistema financeiro é feito para empurrar contratos difíceis de entender e juros abusivos. Nosso papel é te proteger, resgatar sua dignidade financeira e construir soluções viáveis com respeito e segurança.",
-    },
-    {
       question: "Tenho medo de perder minha casa ou meu salário. A negociação pode evitar isso?",
       answer:
         "Sim. A negociação extrajudicial pode impedir bloqueios, penhoras e medidas mais graves, especialmente quando feita de forma técnica e antecipada. Nosso trabalho é agir antes que a situação se agrave, protegendo o que é essencial para sua vida — sua moradia, sua renda e sua tranquilidade.",
@@ -109,7 +103,7 @@ const NegotiatingDebts = () => {
     {
       question: "Já tentei negociar antes e só piorou. Por que seria diferente com um advogado?",
       answer:
-        "Porque agora você não está mais sozinho diante do banco. Com respaldo jurídico, toda proposta é feita com análise de cláusulas, cálculos e proteção contratual. Nós sabemos identificar armadilhas, contestar abusos e garantir que o que for acordado será justo, legal e viável para você.",
+        "Porque agora você não está mais sozinho diante do banco. Com respaldo jurídico, toda proposta é feita com análise de cláusulas, cálculos e proteção contratual. Nós sabemos identificar armadilhas, contestar abusos e garantir que o que for acordado será justo, legal e viável para você. Quando há conhecimento técnico e estratégia, o banco trata o caso com mais seriedade.",
     },
   ];
 
@@ -117,16 +111,16 @@ const NegotiatingDebts = () => {
     <>
       <Hero
         whatsappNumber={contactInfo.phone.secondary}
-        title="Negociação Extrajudicial de Dívidas"
-        description="Nosso escritório atua com foco em defesas bancárias e renegociação de dívidas, com conhecimento técnico e experiência prática acumulada em mais de 15 anos de atuação no mercado financeiro. Com profissionais que já trabalharam dentro de instituições bancárias, temos a expertise necessária para conduzir acordos realistas, sustentáveis e juridicamente seguros."
+        title="Advogados Especialistas em Negociação de Dívidas Bancárias"
+        description="Durante 15 anos, trabalhamos para os bancos. Hoje, colocamos toda essa experiência a favor dos nossos clientes. Com conhecimento real das estratégias bancárias e expertise em crédito, oferecemos uma defesa estratégica e assertiva, agindo rapidamente para proteger seus direitos e patrimônio e garantir resultados concretos."
         links={[]}
         formLabels={{
           name: "Nome Completo",
           city: "Município",
           problem: "Descreva seu caso",
         }}
-        formTitle="Agende uma Consulta"
-        ctaText="Enviar Mensagem"
+        formTitle="Fale Agora com um Advogado"
+        ctaText="Falar com um Advogado Agora"
       />
 
       <InfoListSection
@@ -146,21 +140,21 @@ const NegotiatingDebts = () => {
         </Cta.Description>
         <Cta.Button
           className="bg-white text-cyan-600"
-          title="Iniciar Atendimento pelo Whatsapp"
+          title="Falar Agora com um Advogado"
           type="link"
-          href={contactInfo.whatsapp.services.debtRenegotiation}
         />
       </Cta>
 
       <FAQSection
         title="Perguntas Frequentes"
         faqs={faqData}
-        contactLink={contactInfo.whatsapp.services.debtRenegotiation}
-        contactLabel="Fale agora com um Especialista"
+        contactLink={contactInfo.whatsapp.secondary}
+        contactLabel="Falar Agora com um Advogado"
       />
 
       <Team />
-      <Differentials buttonHref={contactInfo.whatsapp.services.debtRenegotiation} />
+      <Differentials />
+      <WhatsappButton />
     </>
   );
 };

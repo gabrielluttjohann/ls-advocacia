@@ -4,6 +4,7 @@ import FAQSection from "@/components/sections/FAQ";
 import Hero from "@/components/sections/Hero";
 import InfoListSection from "@/components/sections/InfoList";
 import Team from "@/components/sections/Team";
+import WhatsappButton from "@/components/ui/WhatsappButton";
 import { contactInfo } from "@/data/contact";
 
 import {
@@ -127,39 +128,45 @@ const DefendingFarmers = () => {
     {
       question: "O advogado pode ir até a minha propriedade rural?",
       answer:
-        "Sim! Sabemos que muitos produtores estão em áreas afastadas ou têm dificuldade de se deslocar até a cidade. Por isso, nosso escritório oferece atendimento personalizado, inclusive com visitas à propriedade, quando necessário.",
+        "Sim! Sabemos que muitos produtores estão em áreas afastadas ou têm dificuldade de se deslocar até a cidade. Por isso, nosso escritório oferece atendimento personalizado, inclusive com visitas à propriedade, quando necessário. Nosso objetivo é entender a realidade no campo, conversar com você com calma e prestar uma defesa sob medida para o seu caso.",
     },
     {
       question: "O escritório atende produtores rurais em quais regiões?",
       answer:
-        "Atuamos especialmente no Sul do Brasil – Rio Grande do Sul, Santa Catarina e Paraná –, com foco em produtores familiares, médios e grandes. A depender do caso, também prestamos consultoria a distância com acompanhamento completo por telefone, videochamada e WhatsApp.",
+        "Atuamos especialmente no Sul do Brasil – Rio Grande do Sul, Santa Catarina e Paraná –, com foco em produtores familiares, médios e grandes. A depender do caso, também prestamos consultoria a distância com acompanhamento completo por telefone, videochamada e WhatsApp, garantindo praticidade e agilidade.",
     },
     {
       question:
         "O escritório tem profissionais especializados em contratos rurais e cálculos bancários?",
-      answer:
-        "Sim. Contamos com uma equipe multidisciplinar, que une advogados especialistas em Direito Bancário e Agrário, consultores técnicos com experiência prática em gestão rural e peritos contábeis parceiros para cálculos de juros e simulações financeiras.",
+      answer: `
+        Sim, contamos com uma equipe multidisciplinar que reúne: <br />
+        • Advogados especialistas em Direito Bancário e Agrário, com experiência em revisões de contrato, execuções judiciais e defesa patrimonial;<br />
+        • Consultores técnicos com experiência prática em gestão rural e análise contratual;<br />
+        • Peritos contábeis parceiros, que realizam cálculos de juros, encargos e simulações financeiras para embasar as ações com segurança.<br /><br />
+        Esse trabalho em conjunto garante resultados sólidos e defesas bem fundamentadas.
+      `,
     },
     {
       question:
         "Se eu quiser apenas um parecer ou orientação, posso contratar sem entrar com ação?",
       answer:
-        "Com certeza. Nem toda situação exige uma ação judicial. Se o que você precisa é entender seus direitos, revisar um contrato ou tirar dúvidas sobre uma cobrança, oferecemos consultoria individual e parecer técnico com explicações claras e orientações práticas.",
+        "Com certeza. Nem toda situação exige uma ação judicial. Se o que você precisa é entender seus direitos, revisar um contrato ou tirar dúvidas sobre uma cobrança, oferecemos consultoria individual e parecer técnico com explicações claras, análise dos documentos e orientações práticas para que você tome a melhor decisão.",
     },
     {
       question: "O escritório também auxilia em renegociações diretamente com o banco?",
       answer:
-        "Sim. Muitas vezes, conseguimos resolver a situação de forma extrajudicial, com segurança e técnica, sem precisar ir ao Judiciário. Nesses casos, atuamos diretamente na negociação com o banco e redigimos os termos com clareza.",
+        "Sim. Muitas vezes, conseguimos resolver a situação de forma extrajudicial, com segurança e técnica, sem precisar ir ao Judiciário. Nesses casos, atuamos diretamente na negociação com o banco, redigimos os termos com clareza e evitamos que o produtor assine acordos prejudiciais ou com cláusulas abusivas escondidas.",
     },
     {
       question: "Vocês cuidam de tudo ou o produtor precisa correr atrás dos documentos sozinho?",
       answer:
-        "Nós sabemos que o tempo no campo é corrido. Por isso, auxiliamos em todo o processo de organização dos documentos, análise dos contratos, pedidos bancários e encaminhamentos jurídicos. Nosso time acompanha cada etapa de perto.",
+        "Nós sabemos que o tempo no campo é corrido. Por isso, auxiliamos em todo o processo de organização dos documentos, análise dos contratos, pedidos bancários e encaminhamentos jurídicos. Nosso time acompanha cada etapa de perto para deixar você tranquilo e com mais tempo para cuidar da produção.",
     },
     {
       question: "Por que devo confiar no escritório?",
       answer:
-        "Nosso diferencial é a experiência prática e o compromisso com o resultado. São mais de 15 anos de atuação em Direito Bancário, com profissionais que já trabalharam dentro de bancos e conhecem as estratégias das instituições financeiras. Temos uma atuação ética, técnica e transparente, com linguagem acessível e atendimento acolhedor.",
+        `Nosso diferencial é a experiência prática e o compromisso com o resultado. São mais de 15 anos de atuação em Direito Bancário, com profissionais que já trabalharam dentro de bancos, conhecem as estratégias das instituições financeiras e sabem como proteger quem produz. <br /><br />
+        Além disso, temos uma atuação ética, técnica e transparente, com explicações claras, linguagem acessível e atendimento acolhedor. Aqui, você não é um número — é alguém que a gente quer ver prosperando.`,
     },
   ];
 
@@ -167,16 +174,16 @@ const DefendingFarmers = () => {
     <>
       <Hero
         whatsappNumber={contactInfo.phone.secondary}
-        title="Defesa do Produtor Rural"
-        description="Nosso escritório atua na proteção de produtores rurais diante de cobranças bancárias, renegociações forçadas, execuções judiciais e cláusulas abusivas. Com mais de 15 anos de experiência no setor e profissionais que já atuaram dentro de bancos, unimos visão estratégica e técnica jurídica para garantir que o produtor não seja penalizado injustamente por contratos desleais ou práticas abusivas do sistema financeiro."
+        title="Advogados Especialistas na Defesa Bancária do Produtor Rural"
+        description="Durante 15 anos, trabalhamos para os bancos. Hoje, colocamos toda essa experiência a favor dos nossos clientes. Com conhecimento real das estratégias bancárias e expertise em crédito, oferecemos uma defesa estratégica e assertiva, agindo rapidamente para proteger seus direitos e patrimônio e garantir resultados concretos."
         links={[]}
         formLabels={{
           name: "Nome Completo",
           city: "Município",
           problem: "Descreva seu caso",
         }}
-        formTitle="Agende uma Consulta"
-        ctaText="Enviar Mensagem"
+        formTitle="Fale Agora com um Advogado"
+        ctaText="Falar com um Advogado Agora"
       />
 
       <InfoListSection
@@ -195,21 +202,20 @@ const DefendingFarmers = () => {
         </Cta.Description>
         <Cta.Button
           className="bg-white text-cyan-600"
-          title="Iniciar Atendimento pelo Whatsapp"
+          title="Falar Agora com um Advogado"
           type="link"
-          href={contactInfo.whatsapp.services.defenseOfRuralProducers}
         />
       </Cta>
 
       <FAQSection
         title="Perguntas Frequentes"
         faqs={faqData}
-        contactLink={contactInfo.whatsapp.services.defenseOfRuralProducers}
-        contactLabel="Fale agora com um Especialista"
+        contactLink={contactInfo.whatsapp.secondary}
+        contactLabel="Falar Agora com um Advogado"
       />
-
       <Team />
-      <Differentials buttonHref={contactInfo.whatsapp.services.defenseOfRuralProducers} />
+      <Differentials />
+      <WhatsappButton />
     </>
   );
 };

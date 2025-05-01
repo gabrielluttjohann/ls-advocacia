@@ -4,6 +4,7 @@ import FAQSection from "@/components/sections/FAQ";
 import Hero from "@/components/sections/Hero";
 import InfoListSection from "@/components/sections/InfoList";
 import Team from "@/components/sections/Team";
+import WhatsappButton from "@/components/ui/WhatsappButton";
 import { contactInfo } from "@/data/contact";
 import {
   Handshake,
@@ -14,8 +15,8 @@ import {
   User,
   FileText,
   PieChart,
-  Users
-} from 'lucide-react';
+  Users,
+} from "lucide-react";
 
 interface FAQItem {
   question: string;
@@ -23,7 +24,6 @@ interface FAQItem {
 }
 
 const BusinessDebts = () => {
-  
   const listItems = [
     {
       icon: <Handshake className="w-6 h-6 text-cyan-600" />,
@@ -104,7 +104,7 @@ const BusinessDebts = () => {
     {
       question: "O atendimento é apenas presencial ou posso ser atendido à distância?",
       answer:
-        "Nosso escritório oferece atendimento presencial, online e também por visita à empresa, conforme a necessidade do cliente. Entendemos que o empresário precisa de agilidade e praticidade, por isso disponibilizamos reuniões por videoconferência, análise documental digital e comunicação constante por WhatsApp e e-mail.",
+        "Nosso escritório oferece atendimento presencial, online e também por visita à empresa, conforme a necessidade do cliente. Entendemos que o empresário precisa de agilidade e praticidade, por isso, disponibilizamos reuniões por videoconferência, análise documental digital e comunicação constante por WhatsApp e e-mail.",
     },
     {
       question: "O escritório faz visitas à sede da empresa?",
@@ -122,16 +122,16 @@ const BusinessDebts = () => {
     <>
       <Hero
         whatsappNumber={contactInfo.phone.secondary}
-        title="Atuação estratégica e combativa na proteção de consumidores acionados judicialmente por instituições financeiras"
-        description="Recupere o controle financeiro com segurança e apoio jurídico especializado"
+        title="Advogados Especialistas na Defesa Bancária de Empresas"
+        description="Durante 15 anos, trabalhamos para os bancos. Hoje, colocamos toda essa experiência a favor dos nossos clientes. Com conhecimento real das estratégias bancárias e expertise em crédito, oferecemos uma defesa estratégica e assertiva, agindo rapidamente para proteger seus direitos e patrimônio e garantir resultados concretos."
         links={[]}
         formLabels={{
           name: "Nome Completo",
           city: "Município",
           problem: "Descreva seu caso",
         }}
-        formTitle="Agende uma Consulta"
-        ctaText="Enviar Mensagem"
+        formTitle="Fale Agora com um Advogado"
+        ctaText="Falar com um Advogado Agora"
       />
 
       <InfoListSection
@@ -151,21 +151,22 @@ const BusinessDebts = () => {
         </Cta.Description>
         <Cta.Button
           className="bg-white text-cyan-600"
-          title="Iniciar Atendimento pelo Whatsapp"
+          title="Falar Agora com um Advogado"
           type="link"
-          href={contactInfo.whatsapp.services.businessDebts}
         />
       </Cta>
 
       <FAQSection
         title="Perguntas Frequentes"
         faqs={faqData}
-        contactLink={contactInfo.whatsapp.services.businessDebts}
-        contactLabel="Fale agora com um Especialista"
+        contactLink={contactInfo.whatsapp.secondary}
+        contactLabel="Falar Agora com um Advogado"
       />
 
+
       <Team />
-      <Differentials buttonHref={contactInfo.whatsapp.services.businessDebts} />
+      <Differentials />
+      <WhatsappButton />
     </>
   );
 };

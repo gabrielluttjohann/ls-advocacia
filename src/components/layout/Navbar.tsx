@@ -66,7 +66,7 @@ const Navbar = () => {
     <>
       {/* Navbar principal */}
       <nav className="fixed top-0 w-full z-50 bg-white text-gray-700 px-4 py-2 shadow-md">
-        <div className="container mx-auto flex justify-between items-center">
+        <div className="container mx-auto max-w-7xl flex justify-between items-center">
           <div className="flex items-center justify-between space-x-4">
             <Link
               href="/"
@@ -76,7 +76,7 @@ const Navbar = () => {
               <img
                 src={logo.src}
                 alt="Logo"
-                className="w-64 h-24 "
+                className="w-64 h-28"
               />
             </Link>
           </div>
@@ -133,11 +133,11 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Sidebar */}
+      {/* Sidebar com scroll total */}
       <div
-        className={`fixed inset-y-0 left-0 mt-28 w-64 bg-white text-gray-700 transform ${
+        className={`fixed left-0 top-32 bottom-0 w-64 bg-white text-gray-700 transform ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 ease-in-out z-20 md:hidden`}
+        } transition-transform duration-300 ease-in-out z-20 md:hidden overflow-y-auto`}
       >
         <div className="p-4 border-b border-gray-200">
           <h2 className="text-xl font-bold">Menu</h2>

@@ -78,10 +78,10 @@ const Hero = ({
         <div className="relative overflow-hidden px-4 py-16 sm:max-w-xl md:max-w-full md:px-24 responsive-container lg:px-8 lg:py-20">
           <div className="flex flex-col items-center justify-between xl:flex-row">
             <div className="mb-12 w-full max-w-xl xl:mb-0 xl:w-7/12 xl:pr-16">
-              <h2 className="mb-6 max-w-xl font-sans text-xl font-bold tracking-tight text-white sm:text-5xl sm:leading-none">
+              <h2 className="mb-6 max-w-xl font-sans text-3xl font-bold tracking-tight text-white sm:text-5xl sm:leading-none">
                 {title}
               </h2>
-              <p className="mb-4 max-w-2xl text-base text-gray-200 md:text-lg">{description}</p>
+              <p className="mb-4 max-w-2xl text-base text-gray-200 md:text-xl">{description}</p>
               <div className="flex items-center gap-3">
                 {links.map((link, index) => (
                   <Link
