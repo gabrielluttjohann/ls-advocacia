@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import { GoogleTagManager, GoogleTagManagerNoScript } from "@/components/layout/GoogleTagManager";
+// import { GoogleTagManager, GoogleTagManagerNoScript } from "@/components/layout/GoogleTagManager";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
@@ -29,10 +29,10 @@ export default function RootLayout({
           href="/icons/favicon.svg"
         />
 
-        <GoogleTagManager />
+        {/* <GoogleTagManager /> */}
       </head>
       <body className={`${spaceGrotesk.variable}  antialiased`}>
-        <GoogleTagManagerNoScript />
+        {/* <GoogleTagManagerNoScript /> */}
         <header>
           <Navbar />
         </header>
