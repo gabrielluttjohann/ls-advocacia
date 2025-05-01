@@ -57,7 +57,7 @@ export function ExperienceCounter() {
             <div className="text-6xl font-bold text-white mb-2">{processCount}+</div>
             <h3 className="text-2xl text-white font-semibold">Processos Judiciais</h3>
             <p className="text-gray-200 mt-2">
-              Nossas sócias fundadoras já atuaram em mais de {targetProcesses}+ casos
+              Nossas sócias fundadoras já atuaram em mais de {targetProcesses} casos
             </p>
           </motion.div>
 
@@ -68,7 +68,7 @@ export function ExperienceCounter() {
           >
             <div className="text-6xl font-bold text-white mb-2">{outOfCourtNegotiationsCount}+</div>
             <h3 className="text-2xl text-white font-semibold">Negociações Extrajudiciais</h3>
-            <p className="text-gray-200 mt-2">Negociações eficazes direto com os bancos.</p>
+            <p className="text-gray-200 mt-2">Negociações eficazes direto com os bancos</p>
           </motion.div>
         </div>
 
